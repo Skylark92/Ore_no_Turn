@@ -1,0 +1,41 @@
+.main {
+  width: 126px; // 63
+  height: 176px; // 88
+  background-color: dodgerblue;
+  // box-shadow: 0 0 1px 1px black;
+  border: 1px solid gray;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  left: calc((390px / 2) - 63px);
+  transition: 0.5s;
+
+  transform: rotateX(60deg);
+
+  &:hover {
+    transform: rotateX(60deg) rotateY(180deg);
+  }
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 176px;
+}
+
+.front {
+  background: orangered;
+  transform: rotateX(0deg);
+}
+
+.back {
+  background: royalblue;
+  transform: rotateX(180deg);
+}
