@@ -1,11 +1,10 @@
 import css from "./style.module.scss";
 import Back from "./Back";
 import Front from "./Front";
-import clsx from "clsx";
 
-export default function Card({ num }: { num: number }) {
+export default function Card({ index }: { index: number }) {
   return (
-    <div className={clsx(css.main, "card")} style={{ bottom: num + "px" }}>
+    <div className={css.main} style={{ bottom: index * 5 + "px" }}>
       <Front />
       <Back />
     </div>
