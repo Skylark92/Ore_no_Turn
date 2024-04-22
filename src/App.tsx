@@ -12,7 +12,13 @@ function App() {
     const newDeck = [];
 
     for (let i = 0; i < 3; i++) {
-      newDeck.push(new 카드(`$${i}번 카드`, `${i}번 째`));
+      newDeck.push(
+        new 카드(
+          `${i + 1}번 카드`,
+          `${i + 1}번 째`,
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`
+        )
+      );
     }
     setDeck([...newDeck]);
   }, []);
@@ -20,13 +26,11 @@ function App() {
   return (
     <>
       <Header setDeck={setDeck} />
-      <main>
-        <Deck>
-          {deck.map((card, i) => (
-            <Card index={i} />
-          ))}
-        </Deck>
-      </main>
+      <Deck>
+        {deck.map((card, i) => (
+          <Card card={card} key={i} index={i} />
+        ))}
+      </Deck>
     </>
   );
 }

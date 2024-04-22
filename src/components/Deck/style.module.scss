@@ -1,7 +1,6 @@
 .main {
-  width: 390px;
-  height: 600px;
-  border: 1px solid black;
+  width: 100%;
+  height: calc(100% - 64px);
   perspective: 400px;
   position: relative;
 }
