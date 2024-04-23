@@ -1,0 +1,15 @@
+@keyframes addCard {
+  0% {
+    transform: translate3d(200px, -100px, 100px) rotateY(180deg);
+  }
+  50% {
+    transform: translate3d(0, -100px, 200px) rotateY(180deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotateY(180deg) rotateX(-60deg);
+  }
+}
+
+.addCard {
+  animation: addCard 1s ease-in-out;
+}
